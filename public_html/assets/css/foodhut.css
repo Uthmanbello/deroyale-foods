@@ -11283,8 +11283,13 @@ pre {
   max-width: 1440px;
 }
 
+.about-div {
+  width: 100%;
+  flex-direction: column;
+}
+
 .has-img-bg {
-  background: url(../imgs/about-page.jpg) no-repeat center center;
+  background: url(../imgs/about-flat.jpg) no-repeat center center;
   background-size: cover;
 }
 
