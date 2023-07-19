@@ -11364,13 +11364,13 @@ pre {
 
 .gallary .gallary-item {
   padding: 0;
-  border: 1px solid #343a40;
 }
 
 .gallary .gallary-item .gallary-img {
   width: 100%;
   padding: 10px;
   border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0.9, 0.9, 0.9, 1);
 }
 
 .gallary .gallary-item .gallary-overlay {

@@ -1,16 +1,12 @@
-// Function to fetch data from the API
 function fetchData() {
     const apiUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=a';
     const mealsListDiv = document.getElementById('gallery');
 
-    // Make the HTTP request using fetch()
     fetch(apiUrl)
-      .then(response => response.json()) // Parse the response as JSON
+      .then(response => response.json())
       .then(data => {
-        // Process the JSON data here
         const meals = data.meals;
 
-        // Loop through the meals array and display some information
         meals.forEach(meal => {
           const mealDiv = document.createElement('div');
           mealDiv.classList.add('col-sm-6', 'col-lg-3', 'gallary-item', 'wow', 'fadeIn')
@@ -21,14 +17,40 @@ function fetchData() {
                                     <p class="my-font"><i class="fa-solid fa-heart"></i> 5 likes</p>
                                 </a>`;
 
+                                mealDiv.addEventListener('click', () => {
+                                    showPopup(meal);
+                                  });
+
           mealsListDiv.appendChild(mealDiv);
         });
       })
       .catch(error => {
-        // Handle any errors that occur during the fetch
         console.error('Error fetching data:', error);
       });
   }
 
-  // Call the fetchData function to fetch and display the data
+  function showPopup(meal) {
+    const popup = document.getElementById('popup');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupImage = document.getElementById('popupImage');
+    const popupCategory = document.getElementById('popupCategory');
+    const popupArea = document.getElementById('popupArea');
+    const popupInstructions = document.getElementById('popupInstructions');
+
+    popupTitle.textContent = meal.strMeal;
+    popupImage.src = meal.strMealThumb;
+    popupCategory.textContent = `Category: ${meal.strCategory}`;
+    popupArea.textContent = `Area: ${meal.strArea}`;
+    popupInstructions.textContent = `Instructions: ${meal.strInstructions}`;
+
+    popup.style.display = 'block';
+    document.body.style.overflowY = 'hidden';
+  }
+
+  function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+    document.body.style.overflowY = 'auto';
+  }
+
   fetchData();
