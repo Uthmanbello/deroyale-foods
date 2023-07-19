@@ -56,7 +56,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  /* line-height: 1.5; */
   color: #f8f9fa;
   text-align: left;
   background-color: #343a40;
@@ -10993,7 +10993,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #f8f9fa;
-  background: #343a40;
+  /* background: #343a40; */
   box-sizing: border-box;
 }
 
@@ -11339,7 +11339,7 @@ pre {
 }
 
 .section-title {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .has-height-xs {
@@ -11351,7 +11351,7 @@ pre {
 }
 
 .has-height-md {
-  min-height: 300px;
+  min-height: 100px;
 }
 
 .has-height-lg {
@@ -11369,6 +11369,8 @@ pre {
 
 .gallary .gallary-item .gallary-img {
   width: 100%;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .gallary .gallary-item .gallary-overlay {
