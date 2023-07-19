@@ -2735,10 +2735,6 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn-gallery  {
-  border-radius: 30px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .btn {
     -webkit-transition: none;
@@ -11139,7 +11135,7 @@ pre {
 @media (max-width: 1199.98px) {
   .custom-navbar {
     min-height: auto !important;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: #343a40;
   }
   .custom-navbar .navbar-brand {
@@ -11197,8 +11193,11 @@ pre {
 }
 
 .affix {
-  min-height: 80px;
-  background: #343a40;
+  min-height: 40px;
+  /* background: #343a40; */
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+
   border-bottom: 1px solid #495057;
 }
 
@@ -11285,7 +11284,7 @@ pre {
 }
 
 .has-img-bg {
-  background: url(../imgs/about-section.jpg) no-repeat center center;
+  background: url(../imgs/about-page.jpg) no-repeat center center;
   background-size: cover;
 }
 
