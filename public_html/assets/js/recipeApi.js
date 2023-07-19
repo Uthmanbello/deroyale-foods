@@ -12,10 +12,10 @@ function fetchData() {
           mealDiv.classList.add('col-sm-6', 'col-lg-3', 'gallary-item', 'wow', 'fadeIn')
           mealDiv.innerHTML = `
                                 <img src="${meal.strMealThumb}" alt="recipe" class="gallary-img">
-                                <a href="#" class="gallary-overlay">
+                                <div class="gallary-overlay">
                                     <p class="my-font">${meal.strMeal}</p>
                                     <p class="my-font"><i class="fa-solid fa-heart"></i> 5 likes</p>
-                                </a>`;
+                                </div>`;
 
                                 mealDiv.addEventListener('click', () => {
                                     showPopup(meal);
@@ -35,6 +35,8 @@ function fetchData() {
     const popupImage = document.getElementById('popupImage');
     const popupCategory = document.getElementById('popupCategory');
     const popupArea = document.getElementById('popupArea');
+    const popupType = document.getElementById('popupType');
+    const popupView = document.getElementById('popupView');
     const popupInstructions = document.getElementById('popupInstructions');
 
     popupTitle.textContent = meal.strMeal;
@@ -42,6 +44,8 @@ function fetchData() {
     popupCategory.textContent = `Category: ${meal.strCategory}`;
     popupArea.textContent = `Area: ${meal.strArea}`;
     popupInstructions.textContent = `Instructions: ${meal.strInstructions}`;
+    popupType.textContent = `Type: ${meal.strTags}`;
+    popupView.href = meal.strYoutube;
 
     popup.style.display = 'block';
     document.body.style.overflowY = 'hidden';
