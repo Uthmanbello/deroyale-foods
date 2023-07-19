@@ -35,17 +35,28 @@ function fetchData() {
     const popupImage = document.getElementById('popupImage');
     const popupCategory = document.getElementById('popupCategory');
     const popupArea = document.getElementById('popupArea');
-    const popupType = document.getElementById('popupType');
     const popupView = document.getElementById('popupView');
+    const popupIngredients = document.getElementById('popupIngredients');
     const popupInstructions = document.getElementById('popupInstructions');
 
     popupTitle.textContent = meal.strMeal;
     popupImage.src = meal.strMealThumb;
     popupCategory.textContent = `Category: ${meal.strCategory}`;
     popupArea.textContent = `Area: ${meal.strArea}`;
-    popupInstructions.textContent = `Instructions: ${meal.strInstructions}`;
-    popupType.textContent = `Type: ${meal.strTags}`;
+    popupInstructions.textContent = `INSTRUCTIONS: ${meal.strInstructions}`;
     popupView.href = meal.strYoutube;
+    popupIngredients.innerHTML = 'INGREDIENTS';
+
+    for (let i = 1; i <= 20; i++) {
+      const ingredient = meal[`strIngredient${i}`];
+      const measure = meal[`strMeasure${i}`];
+  
+      if (ingredient && ingredient.trim() !== '' && measure && measure.trim() !== '') {
+        const ingredientItem = document.createElement('li');
+        ingredientItem.textContent = `${measure} ${ingredient}`;
+        popupIngredients.appendChild(ingredientItem);
+      }
+    }
 
     popup.style.display = 'block';
     document.body.style.overflowY = 'hidden';
@@ -55,6 +66,23 @@ function fetchData() {
     const popup = document.getElementById('popup');
     popup.style.display = 'none';
     document.body.style.overflowY = 'auto';
+  }
+
+  function getIngredients(meal) {
+    let ingredientsList = '';
+
+    // Loop through the ingredient properties
+    for (let i = 1; i <= 20; i++) {
+      const ingredient = meal[`strIngredient${i}`];
+      const measure = meal[`strMeasure${i}`];
+
+      // Check if the ingredient and measure exist and are not empty
+      if (ingredient && ingredient.trim() !== '' && measure && measure.trim() !== '') {
+        ingredientsList += `<li>${measure} ${ingredient}</li>`;
+      }
+    }
+
+    return ingredientsList;
   }
 
   fetchData();

@@ -11366,6 +11366,12 @@ pre {
   padding: 0;
 }
 
+.gallary .gallary-item:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  transition: transform 0.8s ease-in-out;
+}
+
 .gallary .gallary-item .gallary-img {
   width: 100%;
   padding: 10px;
