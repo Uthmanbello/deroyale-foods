@@ -3338,7 +3338,7 @@ fieldset:disabled a.btn {
   padding: 0.8rem 1.6rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 0.15rem;
+  border-radius: 80px;
 }
 
 .btn-sm, .btn-group-sm > .btn {
@@ -11375,11 +11375,12 @@ pre {
 
 .gallary .gallary-item .gallary-overlay {
   background: rgba(52, 58, 64, 0.7);
+  color: #fff;
   position: absolute;
   left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  width: 93.7%;
+  height: 30%;
   display: -webkit-flex;
   display: -ms-flex;
   display: -webkit-box;
@@ -11392,20 +11393,26 @@ pre {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
+          justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* visibility: hidden; */
+  /* opacity: 0;*/
+  /* -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; */
 }
 
-.gallary .gallary-item .gallary-overlay .gallary-icon {
+/* .gallary .gallary-item .gallary-overlay .gallary-icon {
   font-size: 2.5rem;
   font-weight: bold;
   color: #fff;
-}
+} */
 
-.gallary .gallary-item:hover .gallary-overlay {
+/* .gallary .gallary-item:hover .gallary-overlay {
   visibility: visible;
   opacity: 1;
-}
+} */
