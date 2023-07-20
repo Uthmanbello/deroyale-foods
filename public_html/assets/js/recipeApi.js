@@ -14,7 +14,10 @@ function fetchData() {
                                 <img src="${meal.strMealThumb}" alt="recipe" class="gallary-img">
                                 <div class="gallary-overlay">
                                     <p class="my-font">${meal.strMeal}</p>
-                                    <p class="my-font"><i class="fa-solid fa-heart"></i> 5 likes</p>
+                                    <p class="likes-container">
+                                        <i class="fa-solid fa-heart heart-icon"></i>
+                                        <span class="likes-count my-font">0</span> <span class="my-font">likes</span>
+                                    </p>
                                 </div>`;
 
                                 mealDiv.addEventListener('click', () => {
@@ -71,12 +74,10 @@ function fetchData() {
   function getIngredients(meal) {
     let ingredientsList = '';
 
-    // Loop through the ingredient properties
     for (let i = 1; i <= 20; i++) {
       const ingredient = meal[`strIngredient${i}`];
       const measure = meal[`strMeasure${i}`];
 
-      // Check if the ingredient and measure exist and are not empty
       if (ingredient && ingredient.trim() !== '' && measure && measure.trim() !== '') {
         ingredientsList += `<li>${measure} ${ingredient}</li>`;
       }

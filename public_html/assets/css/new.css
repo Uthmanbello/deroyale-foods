@@ -1,3 +1,17 @@
+.heart-icon {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .heart-icon.clicked {
+    color: red;
+  }
+  
+.likes-counter {
+    display: flex;
+    z-index: -1;
+}
+
 /* POPUP */
 .popup {
     display: none;
