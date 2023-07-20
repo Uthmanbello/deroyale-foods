@@ -14,9 +14,10 @@
     cursor: pointer;
   }
   
-  .heart-icon.clicked {
-    color: red;
-  }
+.heart-icon.liked {
+  color: #ff214f;
+  transform: scale(1.3);
+}
   
 .likes-counter {
     display: flex;

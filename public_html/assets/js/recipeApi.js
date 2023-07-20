@@ -15,7 +15,7 @@ function fetchData() {
                                 <div class="gallary-overlay">
                                     <div class="overlay-text">
                                         <p class="my-font">${meal.strMeal}</p>
-                                        <p class="likes-container">
+                                        <p class="likes-container" data-meal-id="${meal.idMeal}">
                                             <i class="fa-solid fa-heart heart-icon"></i>
                                             <span class="likes-count my-font">0</span> <span class="my-font">likes</span>
                                         </p>
@@ -26,6 +26,26 @@ function fetchData() {
                                 const showButton = mealDiv.querySelector('.show-button');
                                 showButton.addEventListener('click', () => {
                                   showPopup(meal);
+                                });
+
+                                const likesContainer = mealDiv.querySelector('.likes-container');
+                                const heartIcon = mealDiv.querySelector('.heart-icon');
+
+                                function incrementLikes(mealId) {
+                                    const likesCountElement = document.querySelector(`[data-meal-id="${mealId}"] .likes-count`);
+                                    let likesCount = parseInt(likesCountElement.textContent, 10);
+                                    likesCount++;
+                                    likesCountElement.textContent = likesCount;
+                                  }
+                                
+                                heartIcon.addEventListener('click', () => {
+                                    heartIcon.classList.add('liked');
+                                    const mealId = likesContainer.dataset.mealId;
+                                    incrementLikes(mealId);
+
+                                    setTimeout(() => {
+                                        heartIcon.classList.remove('liked');
+                                      }, 200);
                                 });
 
           mealsListDiv.appendChild(mealDiv);
