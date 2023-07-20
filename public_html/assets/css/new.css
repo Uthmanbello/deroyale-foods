@@ -1,3 +1,9 @@
+.about-text {
+    margin-left: 50%;
+    width: 50%;
+    background-color: #343a40b0;
+}
+
 .heart-icon {
     color: #fff;
     cursor: pointer;
@@ -97,4 +103,11 @@
     float: right;
     padding: 0;
     border: 2px solid #ff214f;
+}
+
+@media (max-width: 992px) {
+    .about-text {
+        margin-left: 0;
+        width: 100%;
+    }
 }

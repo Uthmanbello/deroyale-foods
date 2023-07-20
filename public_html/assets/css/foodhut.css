@@ -593,7 +593,7 @@ pre code {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-right: -15px;
+  /* margin-right: -4px; */
   margin-left: -15px;
 }
 
@@ -11284,13 +11284,9 @@ pre {
   max-width: 1440px;
 }
 
-.about-div {
-  width: 100%;
-  flex-direction: column;
-}
-
 .has-img-bg {
-  background: url(../imgs/about-flat.jpg) no-repeat center center;
+  width: 98vw;
+  background: url(../imgs/about-page.jpg) no-repeat center;
   background-size: cover;
 }
 
