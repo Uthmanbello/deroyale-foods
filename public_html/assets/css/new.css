@@ -4,6 +4,11 @@
     background-color: #343a40b0;
 }
 
+.overlay-text {
+    display: flex;
+    justify-content: space-between;
+}
+
 .heart-icon {
     color: #fff;
     cursor: pointer;
@@ -16,6 +21,14 @@
 .likes-counter {
     display: flex;
     z-index: -1;
+}
+
+.show-button {
+    border: none;
+}
+
+.show-button:active {
+    outline: none;
 }
 
 /* POPUP */

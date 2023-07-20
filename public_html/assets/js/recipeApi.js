@@ -13,16 +13,20 @@ function fetchData() {
           mealDiv.innerHTML = `
                                 <img src="${meal.strMealThumb}" alt="recipe" class="gallary-img">
                                 <div class="gallary-overlay">
-                                    <p class="my-font">${meal.strMeal}</p>
-                                    <p class="likes-container">
-                                        <i class="fa-solid fa-heart heart-icon"></i>
-                                        <span class="likes-count my-font">0</span> <span class="my-font">likes</span>
-                                    </p>
+                                    <div class="overlay-text">
+                                        <p class="my-font">${meal.strMeal}</p>
+                                        <p class="likes-container">
+                                            <i class="fa-solid fa-heart heart-icon"></i>
+                                            <span class="likes-count my-font">0</span> <span class="my-font">likes</span>
+                                        </p>
+                                    </div>
+                                    <button class="show-button my-font youtube">Show</button>
                                 </div>`;
 
-                                mealDiv.addEventListener('click', () => {
-                                    showPopup(meal);
-                                  });
+                                const showButton = mealDiv.querySelector('.show-button');
+                                showButton.addEventListener('click', () => {
+                                  showPopup(meal);
+                                });
 
           mealsListDiv.appendChild(mealDiv);
         });
