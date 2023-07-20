@@ -4539,6 +4539,7 @@ input[type="button"].btn-block {
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #ff214f;
+  border-radius: 40px;
 }
 
 .nav-fill .nav-item {
