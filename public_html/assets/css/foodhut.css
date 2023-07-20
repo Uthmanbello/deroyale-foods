@@ -4474,7 +4474,7 @@ input[type="button"].btn-block {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding-left: 0;
+  padding-left: 10px;
   margin-bottom: 0;
   list-style: none;
 }
@@ -10987,7 +10987,7 @@ a.text-dark:hover, a.text-dark:focus {
 *::after,
 *::before {
   margin: 0px;
-  padding: 0px;
+  padding-left: 2px;
   box-sizing: inherit;
 }
 
