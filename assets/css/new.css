@@ -153,7 +153,7 @@
     }
 
     .popup-left {
-        flex-basis: 70%;
+        flex-basis: 75%;
     }
 
     .popup-right {
@@ -161,7 +161,7 @@
     }
 
     .popup-items ol {
-        margin-left: 5vw;
+        margin-left: 3vw;
     }
 
     .popup-ingredients {
