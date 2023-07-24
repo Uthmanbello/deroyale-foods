@@ -72,7 +72,7 @@ function fetchData() {
     popupArea.textContent = `Area: ${meal.strArea}`;
     popupInstructions.textContent = `INSTRUCTIONS: ${meal.strInstructions}`;
     popupView.href = meal.strYoutube;
-    popupIngredients.innerHTML = 'INGREDIENTS';
+    popupIngredients.innerHTML = 'INGREDIENTS:';
 
     for (let i = 1; i <= 20; i++) {
       const ingredient = meal[`strIngredient${i}`];

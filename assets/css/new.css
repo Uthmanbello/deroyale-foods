@@ -1,5 +1,5 @@
 .desk-none {
-    visibility: hidden;
+    display: none;
 }
 
 .about-text {
@@ -132,6 +132,10 @@
         visibility: visible;
     }
 
+    .big-2 {
+        font-size: 1rem;
+    }
+
     .socials {
         flex-direction: row;
         margin-left: -10vw;
@@ -153,18 +157,53 @@
     }
 
     .popup-left {
-        flex-basis: 75%;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .popup-right {
         flex-basis: 0%;
     }
 
-    .popup-items ol {
-        margin-left: 3vw;
+    .popup-title {
+        font-size: 1.4rem;
+    }
+
+    .popup-image {
+        width: 60%;
+    }
+
+    .img-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -30px;
+    }
+
+    .popup-items {
+        flex-direction: column;
     }
 
     .popup-ingredients {
-        line-height: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2vw;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 0;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+
+    .popup-view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+        margin-left: 33vw;
     }
 }
